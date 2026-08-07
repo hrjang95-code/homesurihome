@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME SURI HOME - 회원가입</title>
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="signup.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="signup.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <a
+        class="brand"
+        href="../1_HOME_SURI_HOME_login_screen/login.html"
+        aria-label="HOME SURI HOME 로그인 화면"
+      >
+        <i data-lucide="house"></i>
+        <span>HOME SURI HOME</span>
+      </a>
+
+      <div class="topbar-actions">
+        <button class="icon-button" type="button" aria-label="검색" data-placeholder-button>
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="알림" data-placeholder-button>
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="signup-main">
+
+      <section class="progress-section" aria-label="회원가입 진행 단계">
+        <div class="progress-copy">
+          <span>Step 1: Account Information</span>
+          <strong>33%</strong>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="33"
+          aria-label="회원가입 진행률 33퍼센트"
+        >
+          <span class="progress-value"></span>
+        </div>
+      </section>
+
+      <section class="intro-section">
+        <h1>시작해볼까요?</h1>
+        <p>정확한 정보 입력을 위해 이메일 인증이 필요합니다.</p>
+      </section>
+
+      <form class="signup-form" id="signupForm" novalidate>
+
+        <div class="field-group">
+          <label class="field-label" for="signupEmail">이메일 주소</label>
+
+          <div class="email-row">
+            <div class="field-wrap email-field">
+              <input
+                id="signupEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="example@homesurihome.com"
+                required
+              >
+            </div>
+
+            <button class="verify-button" id="verifyEmail" type="button">
+              인증
+            </button>
+          </div>
+
+          <p class="field-message" id="emailMessage" aria-live="polite"></p>
+        </div>
+
+        <div class="field-group nickname-group">
+          <label class="field-label" for="nickname">닉네임</label>
+
+          <div class="field-wrap">
+            <input
+              id="nickname"
+              name="nickname"
+              type="text"
+              autocomplete="nickname"
+              minlength="2"
+              maxlength="12"
+              placeholder="사용하실 닉네임을 입력하세요"
+              required
+            >
+          </div>
+
+          <p class="field-help">한글, 영문, 숫자 포함 2–12자</p>
+        </div>
+
+        <figure class="room-visual">
+          <img
+            src="../img/1.png"
+            alt="따뜻한 아이보리 톤의 거실에서 쉬고 있는 비버 캐릭터"
+          >
+        </figure>
+
+        <button class="next-button" id="nextButton" type="submit">
+          <span>다음으로</span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="하단 메뉴">
+      <button class="nav-item active" type="button">
+        <i data-lucide="house"></i>
+        <span>홈</span>
+      </button>
+
+      <button class="nav-item" type="button" data-placeholder-button>
+        <i data-lucide="scan-line"></i>
+        <span>AI 스캔</span>
+      </button>
+
+      <button class="nav-item" type="button" data-placeholder-button>
+        <i data-lucide="shopping-cart"></i>
+        <span>구매</span>
+      </button>
+
+      <button class="nav-item" type="button" data-placeholder-button>
+        <i data-lucide="message-square"></i>
+        <span>커뮤니티</span>
+      </button>
+
+      <button class="nav-item" type="button" data-placeholder-button>
+        <i data-lucide="user-round"></i>
+        <span>마이페이지</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+
+</html>

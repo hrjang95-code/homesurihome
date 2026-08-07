@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME SURI HOME - 필요한 공구 찾기</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="shop.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="shop.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="HOME SURI HOME 홈">
+        <i data-lucide="house"></i>
+        <span>HOME SURI HOME</span>
+      </a>
+      <div class="top-actions">
+        <button class="icon-button" type="button" aria-label="검색"><i data-lucide="search"></i></button>
+        <button class="icon-button" type="button" aria-label="알림"><i data-lucide="bell"></i></button>
+      </div>
+    </header>
+
+    <main class="shop-main">
+      <section class="shop-intro" id="shopIntro" aria-label="공구 추천 안내"></section>
+
+      <article class="featured-card" id="featuredProduct"></article>
+
+      <section class="reason-card" id="recommendReason"></section>
+
+      <section class="section-block">
+        <div class="section-title-row">
+          <h2><i data-lucide="shopping-bag"></i> 온라인 최저가 비교</h2>
+        </div>
+        <div class="price-card" id="priceComparison"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title-row">
+          <h2>비슷한 추천 상품</h2>
+          <button class="more-link" type="button">더보기 ›</button>
+        </div>
+        <div class="horizontal-products" id="similarProducts"></div>
+      </section>
+
+      <section class="section-block" id="storeSection">
+        <div class="section-title-row">
+          <h2><i data-lucide="map-pin"></i> 주변 철물점</h2>
+          <button class="more-link" type="button">더보기 ›</button>
+        </div>
+        <div class="map-card" id="nearbyStores"></div>
+      </section>
+
+      <section class="tip-card" id="tipCard"></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="하단 메뉴">
+      <button class="nav-item" type="button"><i data-lucide="house"></i><span>홈</span></button>
+      <button class="nav-item" type="button"><i data-lucide="scan-line"></i><span>AI 진단</span></button>
+      <button class="nav-item active" type="button"><i data-lucide="shopping-cart"></i><span>상점</span></button>
+      <button class="nav-item" type="button"><i data-lucide="users"></i><span>커뮤니티</span></button>
+      <button class="nav-item" type="button"><i data-lucide="user-round"></i><span>마이페이지</span></button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,719 @@
+@charset "UTF-8";
+
+/* =========================================================
+   HOME SURI HOME - similar.css
+   유사 사례 화면
+========================================================= */
+
+.similar-main {
+  padding: 26px 22px 12px;
+}
+
+/* ---------- 상단 AI 유사도 카드 ---------- */
+.similarity-card {
+  min-height: 112px;
+  padding: 20px 18px;
+
+  display: grid;
+  grid-template-columns: 42px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+
+  border-left: 4px solid var(--brown-700);
+  border-radius: 18px;
+
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.similarity-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #f2e8df;
+  color: var(--brown-700);
+}
+
+.similarity-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.similarity-copy span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--brown-700);
+
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.similarity-copy strong {
+  color: #2e231d;
+
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.similarity-copy em {
+  color: var(--brown-700);
+
+  font-size: 24px;
+  font-style: normal;
+}
+
+.similarity-gear {
+  align-self: start;
+
+  color: #f0ece8;
+}
+
+.similarity-gear svg {
+  width: 48px;
+  height: 48px;
+
+  stroke-width: 1.4;
+}
+
+/* ---------- 공통 섹션 ---------- */
+.section-block {
+  margin-top: 32px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.section-title-row h1,
+.section-block h2 {
+  margin: 0;
+
+  color: #2f211a;
+
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.count-pill {
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  background: #fff1e4;
+  color: var(--brown-700);
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* ---------- 대표 해결 사례 ---------- */
+.best-case-card {
+  overflow: hidden;
+
+  border-radius: 22px;
+  background: #ffffff;
+
+  box-shadow: var(--shadow);
+}
+
+.best-image-wrap {
+  position: relative;
+}
+
+.best-image-wrap img {
+  width: 100%;
+  height: 225px;
+
+  object-fit: cover;
+}
+
+.case-badge {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: var(--brown-700);
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.best-match {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #2f2925;
+
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.best-case-body {
+  padding: 18px 20px 20px;
+}
+
+.best-case-body h3 {
+  margin: 0 0 12px;
+
+  color: #241c18;
+
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.info-tag {
+  padding: 6px 9px;
+
+  border: 1px solid #eee5df;
+  border-radius: 999px;
+
+  color: #655950;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.cost-card {
+  margin-top: 16px;
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #f1e7df;
+  border-radius: 16px;
+}
+
+.cost-card small {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #8e7e73;
+  font-size: 8px;
+}
+
+.cost-card strong {
+  color: #3a302a;
+  font-size: 11px;
+}
+
+.cost-price {
+  text-align: right;
+}
+
+.cost-price strong {
+  color: var(--brown-700);
+  font-size: 15px;
+}
+
+.card-footer {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #6e625a;
+
+  font-size: 9px;
+}
+
+.card-stat svg {
+  width: 15px;
+  height: 15px;
+}
+
+.case-arrow {
+  width: 46px;
+  height: 46px;
+
+  margin-left: auto;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--brown-600);
+  color: #ffffff;
+}
+
+.case-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- 진행 중 사례 ---------- */
+.progress-case-card {
+  margin-top: 24px;
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.progress-case-card img {
+  width: 80px;
+  height: 78px;
+
+  flex: 0 0 auto;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+.progress-case-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.progress-case-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 7px;
+}
+
+.progress-status {
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  background: #f6e7ce;
+  color: #b2762c;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.progress-date {
+  color: #9b8f87;
+  font-size: 8px;
+}
+
+.progress-case-copy strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #352821;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.progress-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #786d65;
+  font-size: 9px;
+}
+
+.progress-price-row em {
+  color: var(--brown-700);
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* ---------- AI 추천 사례 ---------- */
+.similar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.similar-card {
+  padding: 10px;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.similar-image-wrap {
+  position: relative;
+}
+
+.similar-card img {
+  width: 100%;
+  height: 112px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+.bookmark-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #7f7268;
+}
+
+.bookmark-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.bookmark-button.is-saved svg {
+  fill: var(--brown-700);
+  color: var(--brown-700);
+}
+
+.similar-card h3 {
+  min-height: 34px;
+
+  margin: 10px 0 8px;
+
+  color: #352821;
+
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.match-rate {
+  display: inline-flex;
+  padding: 5px 7px;
+
+  border-radius: 7px;
+
+  background: #fff4e8;
+  color: var(--brown-700);
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* ---------- 하단 빠른 메뉴 ---------- */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.quick-actions button {
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+  color: #352821;
+
+  box-shadow: var(--shadow-soft);
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.quick-actions svg {
+  width: 28px;
+  height: 28px;
+
+  color: var(--brown-700);
+}
+
+@media (max-width: 360px) {
+  .similar-main {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .best-image-wrap img {
+    height: 205px;
+  }
+
+  .quick-actions {
+    margin-top: 52px;
+  }
+}
+
+
+/* =========================================================
+   유사 사례 화면 선명도·원본 재현 리마스터
+========================================================= */
+
+.similar-main {
+  color: #2b211c;
+}
+
+/* 상단 분석 카드 */
+.similarity-card {
+  border-left-color: #7a4d2e;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(92, 58, 35, 0.09);
+}
+
+.similarity-icon {
+  background: #f1e6dc;
+  color: #75482e;
+}
+
+.similarity-icon svg {
+  stroke-width: 2.2;
+}
+
+.similarity-copy span {
+  color: #75482e;
+  font-size: 9.5px;
+  font-weight: 900;
+}
+
+.similarity-copy strong {
+  color: #241b17;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.similarity-copy em {
+  color: #75482e;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.similarity-gear {
+  color: #ece7e2;
+}
+
+.similarity-gear svg {
+  stroke-width: 1.7;
+}
+
+/* 제목 */
+.section-title-row h1,
+.section-block h2 {
+  color: #251b17;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.count-pill {
+  color: #75482e;
+  background: #fff0e2;
+  font-size: 9.5px;
+  font-weight: 900;
+}
+
+/* 메인 사례 카드 */
+.best-case-card {
+  box-shadow: 0 14px 30px rgba(93, 60, 38, 0.11);
+}
+
+.case-badge {
+  background: #75482e;
+  font-weight: 900;
+}
+
+.best-match {
+  color: #2b211c;
+  font-size: 9.5px;
+  font-weight: 900;
+}
+
+.best-case-body h3 {
+  color: #241b17;
+  font-size: 16.5px;
+  font-weight: 900;
+}
+
+.info-tag {
+  color: #564a43;
+  border-color: #e9dfd8;
+  background: #fff;
+  font-size: 9.5px;
+  font-weight: 800;
+}
+
+.cost-card small {
+  color: #766960;
+  font-weight: 700;
+}
+
+.cost-card strong {
+  color: #322720;
+  font-weight: 900;
+}
+
+.cost-price strong {
+  color: #75482e;
+  font-weight: 900;
+}
+
+.card-stat {
+  color: #51463f;
+  font-size: 9.5px;
+  font-weight: 800;
+}
+
+.card-stat svg,
+.case-arrow svg {
+  stroke-width: 2.15;
+}
+
+.case-arrow {
+  background: #98623c;
+  box-shadow: 0 8px 18px rgba(122, 77, 46, 0.20);
+}
+
+/* 진행 중 사례 */
+.progress-case-card {
+  box-shadow: 0 8px 22px rgba(93, 60, 38, 0.08);
+}
+
+.progress-status {
+  color: #9a6526;
+  background: #f8ead2;
+  font-weight: 900;
+}
+
+.progress-date {
+  color: #776b63;
+  font-weight: 700;
+}
+
+.progress-case-copy strong {
+  color: #2d221d;
+  font-size: 12.5px;
+  font-weight: 900;
+}
+
+.progress-price-row {
+  color: #5f534b;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.progress-price-row em {
+  color: #75482e;
+  font-weight: 900;
+}
+
+.progress-case-card > button {
+  background: transparent;
+  color: #8b7565;
+}
+
+.progress-case-card > button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.25;
+}
+
+/* 유사 사례 카드 */
+.similar-card {
+  box-shadow: 0 8px 20px rgba(93, 60, 38, 0.08);
+}
+
+.similar-card h3 {
+  color: #2b211c;
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.match-rate {
+  color: #75482e;
+  background: #fff2e5;
+  font-size: 9.5px;
+  font-weight: 900;
+}
+
+.bookmark-button {
+  color: #6f6259;
+  box-shadow: 0 5px 13px rgba(92, 58, 35, 0.10);
+}
+
+.bookmark-button svg {
+  stroke-width: 2.2;
+}
+
+/* 하단 액션 카드 */
+.quick-actions button {
+  color: #2d221d;
+  font-size: 11.5px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(93, 60, 38, 0.09);
+}
+
+.quick-actions svg {
+  color: #75482e;
+  stroke-width: 2.15;
+}

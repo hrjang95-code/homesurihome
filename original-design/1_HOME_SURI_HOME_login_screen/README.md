@@ -1,0 +1,1 @@
+login.html을 실행하세요. 로그인 성공 후 이동 경로는 login.js의 ../index.html입니다.

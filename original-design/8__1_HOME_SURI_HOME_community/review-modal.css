@@ -1,0 +1,486 @@
+@charset "UTF-8";
+
+:root {
+  --brown: #98623c;
+  --brown-dark: #7a4d2e;
+  --background: #fbf7f2;
+  --cream: #fff8f4;
+  --button-yellow: #f7bd4c;
+  --star-yellow: #ffb500;
+  --text: #292522;
+  --muted: #8f7d73;
+  --shadow: 0 12px 24px rgba(99, 59, 34, 0.12);
+}
+
+/* 전체 모달 배경 */
+.modal-backdrop {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background: rgba(25, 20, 17, 0.76);
+}
+
+/* 430px 모바일 시안 */
+.review-modal {
+  position: relative;
+  width: min(390px, calc(100vw - 20px));
+  height: min(1146px, calc(100vh - 20px));
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+}
+
+.modal-header {
+  height: 67px;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  padding: 0 21px;
+  background: #fffdfc;
+}
+
+.modal-header h1 {
+  margin: 0;
+  color: var(--brown-dark);
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  font-weight: 900;
+}
+
+.back-button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--brown-dark);
+  background: transparent;
+}
+
+.back-button span {
+  display: block;
+  margin-top: -5px;
+  font-family: "BMHANNA Air", sans-serif;
+  font-size: 43px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.review-form {
+  height: calc(100% - 67px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 30px 24px 118px;
+  scrollbar-width: none;
+}
+
+.review-form::-webkit-scrollbar {
+  display: none;
+}
+
+/* 상단 캐릭터 */
+.intro-section {
+  text-align: center;
+}
+
+.beaver-image {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 18px;
+  object-fit: cover;
+  border-radius: 26px;
+  filter: drop-shadow(0 8px 10px rgba(118, 80, 54, 0.08));
+}
+
+.intro-section p {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: -1.2px;
+  font-weight: 900;
+}
+
+/* 별점 */
+.rating-section,
+.choice-section {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.rating-section {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.star-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.star {
+  padding: 0;
+  color: #ddd4cf;
+  background: transparent;
+  font-size: 38px;
+  line-height: 1;
+  transition: transform 0.16s ease, color 0.16s ease;
+}
+
+.star.is-active {
+  color: var(--star-yellow);
+}
+
+.star:hover,
+.star:focus-visible {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.rating-caption {
+  margin: 8px 0 0;
+  color: #8a766a;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* 사진 영역 */
+.photo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+  margin-top: 29px;
+}
+
+.photo-field {
+  min-width: 0;
+}
+
+.field-label {
+  display: block;
+  margin: 0 0 9px 8px;
+  color: #302d2a;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  font-weight: 900;
+}
+
+.photo-box {
+  position: relative;
+  height: 153px;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: var(--brown);
+  background: #fff7f3;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.camera-icon {
+  position: relative;
+  width: 36px;
+  height: 26px;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid var(--brown);
+  border-radius: 5px;
+  font-size: 0;
+}
+
+.camera-icon::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border: 3px solid var(--brown);
+  border-radius: 50%;
+}
+
+.camera-icon::after {
+  content: "+";
+  position: absolute;
+  right: -10px;
+  top: -13px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.photo-add-text {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.photo-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+}
+
+.photo-box.has-image .photo-preview {
+  display: block;
+}
+
+.photo-box.has-image .camera-icon,
+.photo-box.has-image .photo-add-text {
+  display: none;
+}
+
+/* 후기 입력 */
+.text-section {
+  margin-top: 30px;
+}
+
+.text-label {
+  margin-left: 8px;
+}
+
+textarea {
+  width: 100%;
+  height: 161px;
+  padding: 20px 16px;
+  resize: none;
+  border: 0;
+  border-radius: 15px;
+  outline: 0;
+  color: var(--text);
+  background: #fff8f5;
+  box-shadow: inset 0 3px 7px rgba(100, 60, 36, 0.13);
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 900;
+}
+
+textarea::placeholder {
+  color: #927f74;
+  opacity: 1;
+}
+
+/* 선택 칩 */
+.choice-section {
+  margin-top: 29px;
+}
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.choice-chip {
+  min-width: 92px;
+  height: 41px;
+  padding: 0 18px;
+  border-radius: 22px;
+  color: #694c3d;
+  background: #fff9f6;
+  box-shadow: 0 8px 15px rgba(99, 59, 34, 0.12);
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.choice-chip:hover,
+.choice-chip:focus-visible {
+  transform: translateY(-1px);
+}
+
+.tool-row .choice-chip.is-selected {
+  background: #fff9f6;
+}
+
+.add-chip {
+  min-width: 78px;
+  color: #d9c6bb;
+}
+
+.difficulty-section {
+  margin-top: 29px;
+}
+
+.difficulty-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.difficulty-chip {
+  min-width: 0;
+  width: 100%;
+}
+
+.difficulty-chip.is-selected {
+  background: #ffd8bf;
+  box-shadow: inset 0 2px 5px rgba(141, 77, 37, 0.12), 0 8px 15px rgba(99, 59, 34, 0.1);
+}
+
+/* 하단 고정 버튼 */
+.modal-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 105px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 63px;
+  padding: 14px 24px 18px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 -9px 24px rgba(95, 57, 34, 0.09);
+  backdrop-filter: blur(8px);
+}
+
+.cancel-button,
+.submit-button {
+  height: 56px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+
+.cancel-button {
+  color: #554944;
+  background: #fffaf7;
+}
+
+.submit-button {
+  color: #ffffff;
+  background: var(--button-yellow);
+}
+
+/* 기타 공구 입력 모달 */
+.sub-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(31, 24, 20, 0.52);
+}
+
+.sub-modal-backdrop[hidden] {
+  display: none;
+}
+
+.tool-modal {
+  width: min(330px, 100%);
+  padding: 24px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+}
+
+.tool-modal h2 {
+  margin: 0 0 18px;
+  color: var(--brown-dark);
+  font-size: 19px;
+  text-align: center;
+}
+
+.tool-modal input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #ead9cf;
+  border-radius: 13px;
+  outline: none;
+  color: var(--text);
+  background: #fffaf7;
+}
+
+.tool-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tool-modal-actions button {
+  height: 45px;
+  border-radius: 23px;
+  font-weight: 900;
+}
+
+.tool-modal-cancel {
+  color: var(--brown-dark);
+  background: #f7efea;
+}
+
+.tool-modal-confirm {
+  color: #ffffff;
+  background: var(--button-yellow);
+}
+
+/* 완료 토스트 */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 30;
+  padding: 13px 22px;
+  border-radius: 24px;
+  color: #ffffff;
+  background: rgba(76, 52, 39, 0.94);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  font-size: 14px;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.using-keyboard button:focus-visible,
+.using-keyboard textarea:focus-visible,
+.using-keyboard input:focus-visible {
+  outline: 3px solid rgba(247, 189, 76, 0.55);
+  outline-offset: 3px;
+}
+
+@media (max-width: 390px) {
+  .modal-backdrop {
+    padding: 0;
+  }
+
+  .review-modal {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .review-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .modal-footer {
+    gap: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .photo-section {
+    gap: 14px;
+  }
+}

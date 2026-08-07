@@ -1,0 +1,13 @@
+window.HOME_SURI_COMMON = {
+  initIcons() {
+    if (window.lucide) window.lucide.createIcons();
+  },
+  toast(message) {
+    const toast = document.querySelector("#toast");
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(this.toastTimer);
+    this.toastTimer = setTimeout(() => toast.classList.remove("show"), 1800);
+  }
+};

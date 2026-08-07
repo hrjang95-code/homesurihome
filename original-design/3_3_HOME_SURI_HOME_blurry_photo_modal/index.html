@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOME SURI HOME - 사진 흐림 안내</title>
+
+  <link rel="stylesheet" href="blurry-modal.css">
+
+  <script
+    src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+    defer
+  ></script>
+
+  <script src="blurry-modal.js" defer></script>
+</head>
+
+<body>
+  <main class="demo-page">
+    <button
+      class="open-modal-button"
+      id="openBlurryModal"
+      type="button"
+    >
+      사진 흐림 팝업 열기
+    </button>
+  </main>
+
+  <div
+    class="modal-overlay"
+    id="blurryModal"
+    hidden
+  >
+    <section
+      class="blurry-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="blurryModalTitle"
+      aria-describedby="blurryModalDescription"
+    >
+      <div class="modal-handle" aria-hidden="true"></div>
+
+      <img
+        class="blurry-beaver"
+        src="../img/1_1_002.png"
+        alt="흐린 사진을 보고 당황한 비버 캐릭터"
+      >
+
+      <header class="modal-copy">
+        <h2 id="blurryModalTitle">사진이 조금 흐려요 😥</h2>
+
+        <p id="blurryModalDescription">
+          더 선명하게 찍어주시면<br>
+          정확한 진단에 도움이 돼요.
+        </p>
+      </header>
+
+      <section class="tip-card" aria-label="사진 촬영 팁">
+        <div class="tip-row">
+          <i data-lucide="sun"></i>
+          <span>밝은 곳에서 촬영해주세요.</span>
+        </div>
+
+        <div class="tip-row">
+          <i data-lucide="camera"></i>
+          <span>문제 부위를 가까이 찍어주세요.</span>
+        </div>
+
+        <div class="tip-row">
+          <i data-lucide="hand"></i>
+          <span>흔들리지 않게 고정 후 촬영해주세요.</span>
+        </div>
+      </section>
+
+      <div class="modal-actions">
+        <button
+          class="retry-button"
+          id="retryButton"
+          type="button"
+        >
+          다시 촬영하기
+        </button>
+
+        <button
+          class="select-button"
+          id="selectButton"
+          type="button"
+        >
+          사진 선택하기
+        </button>
+      </div>
+
+      <input
+        id="cameraInput"
+        type="file"
+        accept="image/*"
+        capture="environment"
+        hidden
+      >
+
+      <input
+        id="galleryInput"
+        type="file"
+        accept="image/*"
+        hidden
+      >
+    </section>
+  </div>
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+</body>
+
+</html>

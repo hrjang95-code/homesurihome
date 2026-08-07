@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+/* =========================================================
+   HOME SURI HOME - signup.css
+   회원가입 1단계 화면
+========================================================= */
+
+.signup-main {
+  min-height: calc(100vh - 160px);
+  padding: 62px 24px 34px;
+}
+
+/* ---------- 진행률 ---------- */
+.progress-section {
+  margin-bottom: 34px;
+}
+
+.progress-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  color: #6e4a34;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+}
+
+.progress-copy strong {
+  color: #6e625a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+
+  border-radius: 999px;
+  background: #e8e3df;
+
+  box-shadow: 0 2px 5px rgba(97, 73, 57, 0.08);
+}
+
+.progress-value {
+  display: block;
+  width: 33%;
+  height: 100%;
+
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bda08c, #d7c8bd);
+}
+
+/* ---------- 시작 안내 ---------- */
+.intro-section {
+  margin-bottom: 28px;
+}
+
+.intro-section h1 {
+  margin: 0 0 12px;
+
+  color: #68432d;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+}
+
+.intro-section p {
+  margin: 0;
+
+  color: #574b44;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+/* ---------- 입력 폼 ---------- */
+.signup-form {
+  width: 100%;
+}
+
+.field-group {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.field-label {
+  display: block;
+  margin: 0 0 10px 2px;
+
+  color: #68432d;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ---------- 이메일 입력 + 인증 버튼 ---------- */
+.email-row {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  height: 58px;
+}
+
+.email-field {
+  min-width: 0;
+  flex: 1;
+
+  border-radius: 16px 0 0 16px;
+}
+
+.email-field input {
+  padding-right: 10px;
+}
+
+.verify-button {
+  width: 72px;
+  height: 58px;
+  flex-shrink: 0;
+
+  margin-left: -1px;
+
+  border-radius: 0 16px 16px 0;
+
+  background: var(--brown-700);
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  box-shadow: 0 7px 14px rgba(87, 49, 26, 0.13);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.verify-button:hover {
+  background: #68432d;
+}
+
+.verify-button:active {
+  transform: translateY(1px);
+}
+
+/* ---------- 일반 입력창 ---------- */
+.field-wrap {
+  width: 100%;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  border: 1px solid #efe7e0;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 14px rgba(106, 72, 45, 0.05);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field-wrap:focus-within {
+  border-color: #d8c1af;
+
+  box-shadow: 0 5px 16px rgba(106, 72, 45, 0.09);
+}
+
+.field-wrap input {
+  width: 100%;
+  height: 100%;
+  padding: 0 18px;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  color: #3a302a;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 13px;
+}
+
+.field-wrap input::placeholder {
+  color: #d2c1b7;
+  opacity: 1;
+}
+
+/* ---------- 안내 문구 ---------- */
+.field-message {
+  min-height: 17px;
+  margin: 7px 0 0 3px;
+
+  color: var(--brown-700);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.nickname-group {
+  margin-top: 4px;
+}
+
+.field-help {
+  margin: 10px 0 0 3px;
+
+  color: #8d8178;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* ---------- 거실 이미지 ---------- */
+.room-visual {
+  width: 100%;
+  margin: 46px 0 0;
+  overflow: hidden;
+
+  border-radius: 23px;
+  background: #f6f0eb;
+
+  box-shadow: 0 10px 24px rgba(106, 72, 45, 0.08);
+}
+
+.room-visual img {
+  display: block;
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- 다음 버튼 ---------- */
+.next-button {
+  width: 100%;
+  height: 56px;
+  margin-top: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  border-radius: 14px;
+
+  background: #f7bd4c;
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 900;
+
+  box-shadow: 0 10px 20px rgba(242, 184, 62, 0.26);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.next-button svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+}
+
+.next-button:hover {
+  box-shadow: 0 12px 24px rgba(242, 184, 62, 0.32);
+}
+
+.next-button:active {
+  transform: translateY(1px);
+}
+
+/* ---------- 입력 오류 ---------- */
+.field-wrap.invalid {
+  border-color: rgba(217, 106, 103, 0.75);
+
+  box-shadow: 0 0 0 2px rgba(217, 106, 103, 0.14);
+}
+
+/* ---------- 좁은 화면 ---------- */
+@media (max-width: 360px) {
+  .signup-main {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .progress-copy {
+    font-size: 12px;
+  }
+
+  .intro-section h1 {
+    font-size: 21px;
+  }
+
+  .verify-button {
+    width: 66px;
+  }
+
+  .next-button {
+    font-size: 20px;
+  }
+}

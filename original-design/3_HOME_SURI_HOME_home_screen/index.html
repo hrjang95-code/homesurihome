@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOME SURI HOME</title>
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="home.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="home.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="HOME SURI HOME 홈">
+        <i data-lucide="house"></i>
+        <span>HOME SURI HOME</span>
+      </a>
+
+      <div class="top-actions">
+        <button class="icon-button" type="button" aria-label="검색">
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="알림">
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="home-main">
+
+      <section class="search-wrap" aria-label="수리 검색">
+        <i data-lucide="search"></i>
+
+        <input
+          type="search"
+          placeholder="어떤 수리가 필요하신가요?"
+          aria-label="수리 검색어"
+        >
+      </section>
+
+      <section class="hero-card">
+        <span class="eyebrow">✦ NEW AI 솔루션</span>
+
+        <h1>
+          문제가 있는 곳을<br>
+          카메라로 비춰보세요
+        </h1>
+
+        <p>
+          AI가 즉시 고장 부위를 스캔하고 정확한<br>
+          수리 방법과 예상 견적을 알려드려요.
+        </p>
+
+        <button class="primary-button" type="button" data-scan>
+          AI 스캔 시작하기
+          <i data-lucide="scan-line"></i>
+        </button>
+
+        <div class="scan-visual" aria-hidden="true">
+          <i data-lucide="house"></i>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2>오늘의 집수리 TOP 3 ↗</h2>
+        <div class="stack-list" id="topRepairList"></div>
+      </section>
+
+      <section class="section-block">
+        <h2>계절별 추천 수리</h2>
+        <article class="season-card" id="seasonalCard"></article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title-row">
+          <h2>최근 진단 기록</h2>
+
+          <button
+            class="text-link"
+            type="button"
+            data-toast="최근 진단 기록 전체보기는 다음 단계에서 연결됩니다."
+          >
+            더보기 ›
+          </button>
+        </div>
+
+        <div class="stack-list" id="recentDiagnosisList"></div>
+      </section>
+
+      <section class="section-block">
+        <h2>인기 수리 가이드</h2>
+        <div class="horizontal-grid" id="guideGrid"></div>
+      </section>
+
+      <section class="section-block">
+        <h2>인기 커뮤니티 게시글</h2>
+        <article class="community-card" id="communityCard"></article>
+      </section>
+
+      <section class="section-block">
+        <h2>✦ 나를 위한 AI 추천 수리</h2>
+
+        <article class="ai-card" id="aiRecommendation"></article>
+
+        <div class="ai-shortcuts">
+          <button type="button" data-toast="친환경 수리 화면은 다음 단계에서 연결됩니다.">
+            <i data-lucide="leaf"></i>
+            <span>친환경 수리</span>
+          </button>
+
+          <button type="button" data-toast="비용 절감 화면은 다음 단계에서 연결됩니다.">
+            <i data-lucide="piggy-bank"></i>
+            <span>비용 절감</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="하단 메뉴">
+      <button class="nav-item active" type="button">
+        <i data-lucide="house"></i>
+        <span>홈</span>
+      </button>
+
+      <button class="nav-item" type="button" data-scan>
+        <i data-lucide="scan-line"></i>
+        <span>AI 스캔</span>
+      </button>
+
+      <button class="nav-item" type="button" data-toast="구매 화면은 다음 단계에서 연결됩니다.">
+        <i data-lucide="shopping-bag"></i>
+        <span>구매</span>
+      </button>
+
+      <button class="nav-item" type="button" data-toast="커뮤니티 화면은 다음 단계에서 연결됩니다.">
+        <i data-lucide="users"></i>
+        <span>커뮤니티</span>
+      </button>
+
+      <button class="nav-item" type="button" data-toast="마이페이지는 다음 단계에서 연결됩니다.">
+        <i data-lucide="user-round"></i>
+        <span>마이페이지</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+
+</html>

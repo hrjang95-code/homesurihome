@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOME SURI HOME - 사진 스캔 모달</title>
+
+  <link rel="stylesheet" href="modal.css">
+
+  <script
+    src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+    defer
+  ></script>
+
+  <script src="modal.js" defer></script>
+</head>
+
+<body>
+  <main class="demo-page">
+    <button class="open-modal-button" id="openScanModal" type="button">
+      스캔 모달 열기
+    </button>
+  </main>
+
+  <!-- 사진 스캔 모달 -->
+  <div
+    class="modal-overlay"
+    id="scanModal"
+    role="presentation"
+    hidden
+  >
+    <section
+      class="scan-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="scanModalTitle"
+      aria-describedby="scanModalDescription"
+    >
+      <div class="modal-handle" aria-hidden="true"></div>
+
+      <div class="character-wrap">
+        <img
+          src="../img/1_001.png"
+          alt="노트북으로 사진을 확인하는 비버 캐릭터"
+        >
+
+        <span class="scan-badge" aria-hidden="true">
+          <i data-lucide="scan-line"></i>
+        </span>
+      </div>
+
+      <header class="modal-copy">
+        <h2 id="scanModalTitle">사진을 스캔해볼까요?</h2>
+
+        <p id="scanModalDescription">
+          수리가 필요한 곳을 찍거나<br>
+          앨범에서 사진을 선택해주세요.
+        </p>
+      </header>
+
+      <div class="scan-actions">
+        <button
+          class="scan-option"
+          id="cameraButton"
+          type="button"
+        >
+          <span class="option-icon">
+            <i data-lucide="camera"></i>
+          </span>
+
+          <strong>직접 촬영하기</strong>
+          <small>AI가 바로 분석해드려요</small>
+        </button>
+
+        <button
+          class="scan-option"
+          id="galleryButton"
+          type="button"
+        >
+          <span class="option-icon">
+            <i data-lucide="image"></i>
+          </span>
+
+          <strong>갤러리에서 선택</strong>
+          <small>저장된 사진 불러오기</small>
+        </button>
+      </div>
+
+      <button
+        class="cancel-button"
+        id="closeScanModal"
+        type="button"
+      >
+        취소
+      </button>
+
+      <!-- 퍼블리싱용 숨김 파일 입력 -->
+      <input
+        id="cameraInput"
+        type="file"
+        accept="image/*"
+        capture="environment"
+        hidden
+      >
+
+      <input
+        id="galleryInput"
+        type="file"
+        accept="image/*"
+        hidden
+      >
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

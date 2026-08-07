@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME SURI HOME - 전문가 찾기</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="common.css" />
+
+  <!-- 페이지 전용 스타일 -->
+  <link rel="stylesheet" href="expert.css" />
+
+  <!-- Lucide 아이콘 -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- 데이터 및 공통 기능 -->
+  <script src="data.js" defer></script>
+  <script src="common.js" defer></script>
+
+  <!-- 페이지 전용 기능 -->
+  <script src="expert.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- 상단 헤더 -->
+    <header class="topbar">
+      <a href="../index.html" class="brand" aria-label="HOME SURI HOME 홈">
+        <i data-lucide="house" aria-hidden="true"></i>
+        <span>HOMESURIHOME</span>
+      </a>
+
+      <div class="topbar-actions">
+        <button class="icon-button" type="button" aria-label="검색">
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="알림">
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <!-- 페이지 제목 -->
+      <section class="page-title-row">
+        <button class="back-button" type="button" aria-label="이전 페이지">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <h1>전문가 찾기</h1>
+      </section>
+
+      <!-- 검색 -->
+      <section class="search-section" aria-label="전문가 검색">
+        <label class="search-box">
+          <i data-lucide="search" aria-hidden="true"></i>
+          <input
+            id="expertSearch"
+            type="search"
+            placeholder="어떤 수리 전문가를 찾으시나요?"
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="수리 분야">
+          <!-- JavaScript 렌더링 -->
+        </div>
+      </section>
+
+      <!-- 전문가 SOS 요약 -->
+      <section class="sos-card">
+        <img
+          class="sos-beaver"
+          src="../../img/1_005.png"
+          alt="안전모를 쓰고 인사하는 비버 캐릭터"
+        />
+
+        <div class="sos-copy">
+          <h2>전문가에게 SOS</h2>
+          <p>
+            직접 수리가 어렵다면 믿을 수 있는 전문가에게 맡겨보세요.
+            AI가 현재 고장 유형을 분석하여 가장 적합한 전문가를 추천합니다.
+          </p>
+        </div>
+
+        <div class="sos-stats">
+          <article>
+            <span>평균 예상 수리비</span>
+            <strong>₩4.5만</strong>
+          </article>
+
+          <article>
+            <span>평균 도착 시간</span>
+            <strong>35분</strong>
+          </article>
+
+          <article>
+            <span>AI 추천 전문가 수</span>
+            <strong>12명</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- 추천 전문가 -->
+      <section class="recommended-section">
+        <div class="section-heading">
+          <div class="title-line">
+            <h2>AI 추천 전문가</h2>
+            <span class="match-label">BEST MATCH</span>
+          </div>
+          <p>현재 분석한 문제와 가장 잘 맞는 전문가입니다.</p>
+        </div>
+
+        <div class="expert-list" id="expertList">
+          <!-- JavaScript 렌더링 -->
+        </div>
+
+        <button class="more-button" id="moreExperts" type="button">
+          가까운 전문가 더 보기
+          <i data-lucide="chevron-down"></i>
+        </button>
+      </section>
+    </main>
+
+    <!-- 하단 고정 네비게이션 -->
+    <nav class="bottom-nav" aria-label="주요 메뉴">
+      <a href="../index.html" class="nav-item">
+        <i data-lucide="house"></i>
+        <span>홈</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i data-lucide="scan-line"></i>
+        <span>AI 스캔</span>
+      </a>
+
+      <a href="expert.html" class="nav-item active" aria-current="page">
+        <span class="active-icon">
+          <i data-lucide="search"></i>
+        </span>
+        <span>전문가</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i data-lucide="users"></i>
+        <span>커뮤니티</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <i data-lucide="user-round"></i>
+        <span>마이</span>
+      </a>
+    </nav>
+
+    <!-- 토스트 -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>

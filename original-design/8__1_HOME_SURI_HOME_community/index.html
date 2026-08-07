@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME SURI HOME - 수리 후기 작성</title>
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="review-modal.css">
+
+  <script src="common.js" defer></script>
+  <script src="review-modal.js" defer></script>
+</head>
+<body>
+  <!-- 모달 배경 -->
+  <div class="modal-backdrop" id="reviewModal" role="presentation">
+    <!-- 후기 작성 모달 -->
+    <section
+      class="review-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reviewTitle"
+      aria-describedby="reviewDescription"
+    >
+      <!-- 상단 헤더 -->
+      <header class="modal-header">
+        <button class="back-button" type="button" data-close-modal aria-label="후기 작성 닫기">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <h1 id="reviewTitle">수리 후기 작성</h1>
+        <span class="header-spacer" aria-hidden="true"></span>
+      </header>
+
+      <form class="review-form" id="reviewForm">
+        <!-- 캐릭터 및 안내 문구 -->
+        <section class="intro-section">
+          <img
+            class="beaver-image"
+            src="../img/8_8_001.png"
+            alt="안전모를 쓴 비버 캐릭터"
+          >
+          <p id="reviewDescription">직접 해결하셨다니 정말 대단해요!</p>
+        </section>
+
+        <!-- 별점 -->
+        <fieldset class="rating-section">
+          <legend class="sr-only">수리 만족도</legend>
+          <div class="star-row" role="radiogroup" aria-label="별점 선택">
+            <button type="button" class="star is-active" data-rating="1" aria-label="1점">★</button>
+            <button type="button" class="star is-active" data-rating="2" aria-label="2점">★</button>
+            <button type="button" class="star is-active" data-rating="3" aria-label="3점">★</button>
+            <button type="button" class="star is-active" data-rating="4" aria-label="4점">★</button>
+            <button type="button" class="star is-active" data-rating="5" aria-label="5점">★</button>
+          </div>
+          <p class="rating-caption">얼마나 만족하시나요?</p>
+          <input type="hidden" name="rating" id="ratingValue" value="5">
+        </fieldset>
+
+        <!-- 수리 전후 사진 -->
+        <section class="photo-section" aria-label="수리 전후 사진">
+          <label class="photo-field">
+            <span class="field-label">📷 수리 전 사진</span>
+            <span class="photo-box" data-photo-box>
+              <span class="camera-icon" aria-hidden="true">♙</span>
+              <span class="photo-add-text">[사진 추가]</span>
+              <img class="photo-preview" alt="수리 전 사진 미리보기">
+            </span>
+            <input class="photo-input sr-only" type="file" accept="image/*" name="beforePhoto">
+          </label>
+
+          <label class="photo-field">
+            <span class="field-label">📷 수리 후 사진</span>
+            <span class="photo-box" data-photo-box>
+              <span class="camera-icon" aria-hidden="true">♙</span>
+              <span class="photo-add-text">[사진 추가]</span>
+              <img class="photo-preview" alt="수리 후 사진 미리보기">
+            </span>
+            <input class="photo-input sr-only" type="file" accept="image/*" name="afterPhoto">
+          </label>
+        </section>
+
+        <!-- 후기 작성 -->
+        <section class="text-section">
+          <label class="field-label text-label" for="reviewText">📝 후기 작성</label>
+          <textarea
+            id="reviewText"
+            name="review"
+            maxlength="500"
+            placeholder="어떤 문제가 있었고 어떻게 해결했나요?"
+          ></textarea>
+        </section>
+
+        <!-- 사용한 공구 -->
+        <fieldset class="choice-section tools-section">
+          <legend class="field-label">🔧 사용한 공구</legend>
+          <div class="choice-row tool-row">
+            <button type="button" class="choice-chip is-selected" data-tool="드라이버">드라이버</button>
+            <button type="button" class="choice-chip is-selected" data-tool="실리콘">실리콘</button>
+            <button type="button" class="choice-chip is-selected" data-tool="전동드릴">전동드릴</button>
+            <button type="button" class="choice-chip add-chip" id="addToolButton">＋ 기타</button>
+          </div>
+          <input type="hidden" name="tools" id="toolsValue" value="드라이버,실리콘,전동드릴">
+        </fieldset>
+
+        <!-- 난이도 -->
+        <fieldset class="choice-section difficulty-section">
+          <legend class="field-label">📊 난이도</legend>
+          <div class="choice-row difficulty-row">
+            <button type="button" class="choice-chip difficulty-chip" data-difficulty="쉬움">쉬움</button>
+            <button type="button" class="choice-chip difficulty-chip is-selected" data-difficulty="보통">보통</button>
+            <button type="button" class="choice-chip difficulty-chip" data-difficulty="어려움">어려움</button>
+          </div>
+          <input type="hidden" name="difficulty" id="difficultyValue" value="보통">
+        </fieldset>
+
+        <!-- 하단 버튼 -->
+        <footer class="modal-footer">
+          <button class="cancel-button" type="button" data-close-modal>취소</button>
+          <button class="submit-button" type="submit">후기 등록하기</button>
+        </footer>
+      </form>
+    </section>
+  </div>
+
+  <!-- 기타 공구 입력 모달 -->
+  <div class="sub-modal-backdrop" id="toolModal" hidden>
+    <section class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="toolModalTitle">
+      <h2 id="toolModalTitle">사용한 공구 추가</h2>
+      <input id="customToolInput" type="text" maxlength="12" placeholder="공구 이름을 입력하세요">
+      <div class="tool-modal-actions">
+        <button type="button" class="tool-modal-cancel" id="cancelToolButton">취소</button>
+        <button type="button" class="tool-modal-confirm" id="confirmToolButton">추가</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- 등록 완료 토스트 -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    후기가 등록되었습니다.
+  </div>
+</body>
+</html>

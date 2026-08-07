@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+/* =========================================================
+   HOME SURI HOME - community.css
+   피그마 원본 비율 재현 버전
+========================================================= */
+
+.community-main {
+  padding: 32px 24px 34px;
+}
+
+/* ---------- 상단 전환 탭 ---------- */
+
+.community-switch {
+  width: 264px;
+  margin: 0 auto;
+  padding: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-radius: 999px;
+  background: #f8f3ef;
+
+  box-shadow:
+    0 10px 24px rgba(106, 72, 45, 0.09);
+}
+
+.switch-button {
+  height: 52px;
+
+  border-radius: 999px;
+  background: transparent;
+  color: #5a4d46;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.switch-button.active {
+  background: #fff;
+  color: var(--brown-700);
+
+  box-shadow:
+    0 7px 18px rgba(106, 72, 45, 0.10);
+}
+
+/* ---------- 필터 ---------- */
+
+.filter-row {
+  display: flex;
+  gap: 11px;
+
+  margin: 46px 0 38px;
+}
+
+.filter-button {
+  height: 38px;
+  padding: 0 18px;
+
+  border: 1px solid #eadfd8;
+  border-radius: 999px;
+
+  background: #fff;
+  color: #554941;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.filter-button.active {
+  border-color: var(--brown-700);
+  background: var(--brown-700);
+  color: #fff;
+}
+
+.filter-button.ai {
+  padding-inline: 17px;
+}
+
+/* ---------- 대표 게시글 ---------- */
+
+.featured-post {
+  padding: 26px;
+
+  border-radius: 24px;
+  background: #fff;
+
+  box-shadow:
+    0 16px 36px rgba(106, 72, 45, 0.12);
+}
+
+.post-header {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 11px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+
+  border: 3px solid #fff;
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  box-shadow:
+    0 5px 14px rgba(84, 57, 39, 0.12);
+}
+
+.author-copy strong {
+  display: block;
+
+  color: #2a201b;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.author-copy small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #6f625a;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.ai-badge {
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: var(--brown-700);
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.bookmark-button {
+  display: grid;
+  place-items: center;
+
+  background: transparent;
+  color: #887b72;
+}
+
+.bookmark-button svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 2.1;
+}
+
+.bookmark-button.is-saved svg {
+  fill: var(--brown-700);
+  color: var(--brown-700);
+}
+
+.featured-post h1 {
+  margin: 28px 0 20px;
+
+  color: var(--brown-700);
+
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.38;
+  letter-spacing: -0.045em;
+}
+
+/* ---------- 비포·애프터 ---------- */
+
+.before-after-wrap {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+}
+
+.before-after-wrap img {
+  width: 100%;
+  height: 186px;
+
+  object-fit: cover;
+}
+
+.before-label,
+.after-label {
+  position: absolute;
+  top: 15px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.before-label {
+  left: 15px;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #4f443e;
+}
+
+.after-label {
+  right: 15px;
+
+  background: var(--brown-700);
+  color: #fff;
+}
+
+.compare-handle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: var(--brown-700);
+
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 8px 20px rgba(106, 72, 45, 0.12);
+}
+
+.compare-handle svg {
+  width: 19px;
+  height: 19px;
+
+  stroke-width: 2.2;
+}
+
+/* ---------- 금액·시간·난이도 ---------- */
+
+.post-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+
+  margin: 22px 0;
+}
+
+.fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #4f433d;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.fact svg {
+  width: 18px;
+  height: 18px;
+
+  color: var(--brown-700);
+  stroke-width: 2.1;
+}
+
+/* ---------- 본문 ---------- */
+
+.post-description {
+  margin: 0;
+
+  color: #433832;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.9;
+}
+
+.tool-title {
+  margin: 30px 0 12px;
+
+  color: #84786f;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tool-tag {
+  padding: 9px 14px;
+
+  border-radius: 11px;
+
+  background: #f7f2ee;
+  color: #433832;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* ---------- 게시글 하단 ---------- */
+
+.post-footer {
+  margin-top: 34px;
+  padding-top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border-top: 1px solid #eee5de;
+}
+
+.footer-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #4d423b;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.footer-stat svg {
+  width: 20px;
+  height: 20px;
+
+  stroke-width: 2;
+}
+
+.view-all {
+  margin-left: auto;
+
+  background: transparent;
+  color: var(--brown-700);
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.similar-link {
+  width: 100%;
+
+  margin-top: 20px;
+  padding-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-top: 1px solid #eee5de;
+
+  background: transparent;
+  color: var(--brown-700);
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.similar-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ---------- AI 맞춤 유사 게시글 ---------- */
+
+.section-block {
+  margin-top: 44px;
+}
+
+.section-block h2 {
+  margin: 0 0 18px;
+
+  color: #2b211c;
+
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.similar-posts {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 78%;
+  gap: 14px;
+
+  overflow-x: auto;
+
+  padding-bottom: 10px;
+
+  scrollbar-width: none;
+}
+
+.similar-posts::-webkit-scrollbar {
+  display: none;
+}
+
+.similar-card {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 10px 24px rgba(106, 72, 45, 0.10);
+}
+
+.similar-card img {
+  width: 100%;
+  height: 166px;
+
+  object-fit: cover;
+}
+
+.similar-card-body {
+  padding: 14px;
+}
+
+.similar-card h3 {
+  min-height: 38px;
+
+  margin: 0 0 10px;
+
+  color: #2b211c;
+
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.similar-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #6f625a;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.similar-meta span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.similar-meta svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+/* ---------- 후기 배너 ---------- */
+
+.review-banner {
+  position: relative;
+  height: 350px;
+  margin-top: 42px;
+  overflow: hidden;
+  border-radius: 27px;
+  background: #fffdfb;
+  box-shadow: 0 12px 28px rgba(105, 75, 48, 0.11);
+}
+
+/* 피그마 시안의 좌상단 연한 장식 원 */
+.review-bg-circle {
+  position: absolute;
+  left: -43px;
+  top: -44px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #f8f2ee;
+}
+
+/* 말풍선·하트·공구까지 포함된 원본 이미지 */
+.review-beaver {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 58px;
+  width: min(318px, calc(100% - 22px));
+  height: auto;
+  transform: translateX(-50%);
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.review-button {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  min-width: 164px;
+  height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #f6bd4f;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  box-shadow: 0 8px 18px rgba(247, 189, 76, 0.34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.review-button svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+@media (max-width: 390px) {
+  .community-main {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .featured-post {
+    padding: 22px;
+  }
+
+  .featured-post h1 {
+    font-size: 22px;
+  }
+
+  .before-after-wrap img {
+    height: 172px;
+  }
+
+  .review-banner {
+    min-height: 340px;
+    height: 340px;
+  }
+
+  .review-beaver {
+    top: 58px;
+    width: min(306px, calc(100% - 20px));
+    height: auto;
+  }
+}

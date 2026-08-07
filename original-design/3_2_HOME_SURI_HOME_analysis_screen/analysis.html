@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME SURI HOME - 정밀 진단</title>
+
+  <link rel="stylesheet" href="analysis.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="analysis.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="HOME SURI HOME 홈">
+        <i data-lucide="house"></i>
+        <span>HOME SURI HOME</span>
+      </a>
+
+      <div class="top-actions">
+        <button class="icon-button" type="button" aria-label="검색">
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="알림">
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="analysis-main">
+
+      <section class="character-section">
+        <div class="speech-bubble" id="speechBubble">
+          비버가 원인을<br>찾고 있어요!
+        </div>
+
+        <img
+          class="analysis-beaver"
+          src="../img/1_1_001.png"
+          alt="돋보기로 누수 원인을 확인하는 비버 캐릭터"
+        >
+      </section>
+
+      <section class="analysis-copy">
+        <span class="analysis-badge">AI ANALYSIS IN PROGRESS</span>
+        <h1>정밀 진단 중</h1>
+        <p>
+          이미지 픽셀 데이터를 분석하여<br>
+          수리 방안을 설계하고 있습니다.
+        </p>
+      </section>
+
+      <section class="analysis-steps" aria-label="분석 진행 단계">
+        <article class="analysis-step is-complete" id="stepOne">
+          <span class="step-icon">
+            <i data-lucide="check"></i>
+          </span>
+          <strong>손상 부위 실시간 감지 완료</strong>
+        </article>
+
+        <article class="analysis-step" id="stepTwo">
+          <span class="step-icon">
+            <i data-lucide="check"></i>
+          </span>
+          <strong>발생 원인 다각도 분석 완료</strong>
+        </article>
+
+        <article class="analysis-step matching-step" id="stepThree">
+          <div class="matching-copy">
+            <span class="gear-icon">
+              <i data-lucide="settings"></i>
+            </span>
+            <strong>최적의 수리 솔루션 매칭</strong>
+          </div>
+
+          <span class="progress-label" id="progressLabel">진행중 0%</span>
+
+          <div class="progress-track">
+            <span class="progress-value" id="progressValue"></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="result-actions">
+        <button class="result-action" id="toolButton" type="button" disabled>
+          <i data-lucide="wrench"></i>
+          <span>필요 공구<br>리스트업</span>
+        </button>
+
+        <button class="result-action" id="guideButton" type="button" disabled>
+          <i data-lucide="notebook-tabs"></i>
+          <span>상세 수리<br>가이드 생성</span>
+        </button>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="하단 메뉴">
+      <button class="nav-item" type="button">
+        <i data-lucide="house"></i>
+        <span>홈</span>
+      </button>
+
+      <button class="nav-item active" type="button">
+        <i data-lucide="scan-line"></i>
+        <span>AI 스캔</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="shopping-bag"></i>
+        <span>구매</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="users"></i>
+        <span>커뮤니티</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="user-round"></i>
+        <span>마이페이지</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,567 @@
+.shop-main {
+  padding: 4px 22px 34px;
+}
+
+.shop-intro {
+  display: grid;
+  grid-template-columns: 43% 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 14px;
+}
+
+.shop-intro img {
+  width: 100%;
+  height: 132px;
+  object-fit: contain;
+}
+
+.shop-intro h1 {
+  margin: 0 0 8px;
+  color: var(--brown-700);
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -.04em;
+}
+
+.shop-intro p {
+  margin: 0;
+  color: #665950;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ---------- AI 추천 상품 카드 ---------- */
+
+.featured-card {
+  padding: 14px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(106, 72, 45, 0.1);
+}
+
+.product-image-wrap {
+  position: relative;
+  height: 238px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #eee8e2;
+}
+
+.product-image-wrap > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* AI 추천 제품 배지 */
+.product-badge,
+.best-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+
+  padding: 5px 9px;
+  border-radius: 999px;
+
+  background: #8f603b;
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* 찜 버튼 */
+.favorite-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  color: #90857d;
+  box-shadow: 0 3px 10px rgba(70, 48, 32, 0.08);
+}
+
+.favorite-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.favorite-btn.liked svg {
+  fill: #d96a67;
+  color: #d96a67;
+}
+
+/* 상품 설명 */
+.featured-body {
+  padding: 14px 2px 0;
+}
+
+.kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: #ed7171;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.featured-body h2 {
+  margin: 0 0 8px;
+  color: #241c18;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+/* 별점·리뷰·판매 */
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8c8179;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #8b5d36;
+}
+
+.rating svg {
+  width: 11px;
+  height: 11px;
+  fill: #d69a43;
+  color: #d69a43;
+  stroke-width: 1.5;
+}
+
+.rating strong {
+  color: #7a4d2e;
+  font-size: 10px;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 10px;
+  background: #ded6cf;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  margin: 10px 0;
+  color: var(--brown-700);
+  line-height: 1;
+}
+
+.won-symbol {
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.price strong {
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.price strong {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* 배송 배지 */
+.stock-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stock-pill {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #f1ece7;
+  color: #82766e;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stock-pill.blue {
+  background: #e5f4fb;
+  color: #419cba;
+}
+
+.stock-pill.green {
+  background: #e6f5e9;
+  color: #47945f;
+}
+
+/* 구매 버튼 */
+.product-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.product-actions button {
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border-radius: 12px;
+
+  font-size: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.product-actions button svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.8;
+}
+
+.primary-buy {
+  background: #f2b849;
+  color: #fff;
+  box-shadow: 0 7px 15px rgba(242, 184, 73, 0.22);
+}
+
+.outline-buy {
+  background: #fff;
+  color: #7a4d2e;
+  border: 1.5px solid #7a4d2e;
+}
+
+.reason-card,
+.tip-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid #efc58c;
+  border-radius: 20px;
+  background: #fffaf4;
+}
+
+.reason-card img,
+.tip-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.reason-card h3,
+.tip-card h3 {
+  margin: 0 0 6px;
+  color: var(--brown-700);
+  font-size: 13px;
+}
+
+.reason-card p,
+.tip-card p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.ai-label,
+.tip-label {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #f0e7dd;
+  color: var(--brown-700);
+  font-size: 8px;
+}
+
+.section-block {
+  margin-top: 38px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-title-row h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -.04em;
+}
+
+.more-link {
+  color: #6e6259;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.price-card {
+  overflow: hidden;
+  padding: 12px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: 38px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 10px;
+  border-radius: 14px;
+}
+
+.price-row + .price-row {
+  border-top: 1px solid #f2ece6;
+}
+
+.store-logo{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  flex-shrink:0;
+  background:none;
+  border-radius:0;
+  padding:0;
+}
+
+.price-row.lowest {
+  background: #f8f3ee;
+}
+
+.price-info strong {
+  font-size: 14px;
+}
+
+.price-info small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.buy-small {
+  min-width: 68px;
+  height: 36px;
+  border-radius: 12px;
+  background: #f7f3ef;
+  color: #665950;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.price-row.lowest .buy-small {
+  background: var(--brown-600);
+  color: #fff;
+}
+
+.horizontal-products {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 42%;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.horizontal-products::-webkit-scrollbar {
+  display: none;
+}
+
+.mini-product {
+  padding: 10px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.mini-product img {
+  width: 100%;
+  height: 108px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: #eee9e4;
+}
+
+.mini-product h3 {
+  min-height: 34px;
+  margin: 9px 0 4px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.mini-product strong {
+  color: var(--brown-700);
+  font-size: 14px;
+}
+
+.mini-product small {
+  display: block;
+  margin-top: 3px;
+  color: #8d8178;
+  font-size: 9px;
+}
+
+.map-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.map-image-wrap {
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  background: #eee9e4;
+}
+
+.map-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-location {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: var(--brown-600);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.store-list {
+  padding: 8px;
+}
+
+.store-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 16px;
+}
+
+.store-item + .store-item {
+  border-top: 1px solid #f1ebe5;
+}
+
+.store-info strong {
+  font-size: 13px;
+}
+
+.store-info small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.open {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.stock-ok {
+  color: #aa7d45;
+  font-weight: 800;
+}
+
+.store-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.store-actions button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--brown-700);
+  box-shadow: var(--shadow-soft);
+}
+
+.store-actions button:last-child {
+  background: var(--gold);
+  color: #fff;
+}
+
+.store-actions svg {
+  width: 17px;
+}
+
+.tip-card {
+  margin-bottom: 24px;
+  border: 0;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.tip-card img {
+  order: 2;
+  margin-left: auto;
+}
+
+.tip-card a {
+  color: var(--brown-700);
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+@media (max-width: 360px) {
+  .shop-main {
+    padding-inline: 16px;
+  }
+
+  .shop-intro h1 {
+    font-size: 19px;
+  }
+
+  .product-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .horizontal-products {
+    grid-auto-columns: 47%;
+  }
+}

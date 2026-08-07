@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+/* ---------- 분석 결과 메인 ---------- */
+.result-main {
+  padding: 10px 24px 34px;
+}
+
+.result-hero {
+  text-align: center;
+  padding: 8px 0 22px;
+}
+
+.result-beaver {
+  width: 142px;
+  height: 136px;
+  object-fit: contain;
+  margin: 0 auto 6px;
+}
+
+.result-hero h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -.05em;
+}
+
+.issue-title {
+  margin: 12px 0 10px;
+  color: var(--brown-700);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.confidence-pill {
+  display: inline-flex;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--brown-700);
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: var(--shadow-soft);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.summary-card {
+  padding: 18px 8px 16px;
+  text-align: center;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.summary-icon {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fbf1e5;
+  color: var(--brown-600);
+}
+
+.summary-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.summary-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.summary-card strong {
+  font-size: 16px;
+  color: var(--brown-700);
+}
+
+.warning-card {
+  margin-top: 24px;
+  padding: 22px 20px;
+  border-radius: 22px;
+  background: #e2a35a;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.warning-card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #d71920;
+  font-size: 21px;
+}
+
+.warning-card h2 svg {
+  color: #ffe733;
+  fill: #ffe733;
+}
+
+.warning-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.warning-card li {
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.warning-card li::marker {
+  color: #d71920;
+}
+
+.section-block {
+  margin-top: 30px;
+}
+
+.section-block h2,
+.checklist-card h2 {
+  margin: 0 0 15px;
+  font-size: 17px;
+  color: var(--brown-700);
+  letter-spacing: -.04em;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.tool-card {
+  min-height: 58px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tool-card i,
+.tool-card svg {
+  width: 17px;
+  height: 17px;
+  color: var(--brown-600);
+}
+
+.part-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.part-card img {
+  width: 90px;
+  height: 82px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.part-info {
+  min-width: 0;
+}
+
+.part-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #8b603e;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.part-info h3 {
+  margin: 8px 0 4px;
+  color: var(--brown-700);
+  font-size: 17px;
+}
+
+.part-info p,
+.part-info small {
+  margin: 0;
+  color: #7b6b60;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-heading-row span {
+  font-size: 10px;
+  color: var(--brown-700);
+  font-weight: 700;
+}
+
+.step-list {
+  display: grid;
+  gap: 18px;
+}
+
+.step-card {
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-image-wrap {
+  position: relative;
+}
+
+.step-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.step-badge {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #8d5f3b;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.step-body {
+  padding: 18px;
+}
+
+.step-body h3 {
+  margin: 0 0 10px;
+  color: var(--brown-700);
+  font-size: 17px;
+}
+
+.step-body p {
+  margin: 0;
+  color: #5d5149;
+  font-size: 12px;
+  line-height: 1.75;
+  font-weight: 600;
+}
+
+.checklist-card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 22px;
+  background: #fff8f2;
+  box-shadow: var(--shadow-soft);
+}
+
+.checklist-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.check-item input {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--brown-600);
+}
+
+.expert-link,
+.complete-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 18px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+}
+
+.expert-link {
+  margin-top: 24px;
+  background: #fff7f1;
+  color: var(--brown-700);
+  box-shadow: var(--shadow-soft);
+}
+
+.complete-button {
+  margin-top: 12px;
+  background: linear-gradient(90deg, #f2b63d, #ffc857);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(242, 182, 61, 0.3);
+}
+
+.expert-link svg,
+.complete-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- 수리 완료 모달 ---------- */
+.complete-modal {
+  width: min(100%, 390px);
+  max-height: calc(100vh - 20px);
+  padding: 14px 28px 28px;
+  overflow-y: auto;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  transform: translateY(18px) scale(0.98);
+  transition: transform 0.24s ease;
+}
+
+.modal-overlay.is-open .complete-modal {
+  transform: translateY(0) scale(1);
+}
+
+.complete-beaver {
+  width: 260px;
+  height: 165px;
+  margin: 0 auto 8px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.complete-modal .modal-copy h2 {
+  margin: 0 0 18px;
+  color: var(--brown-700);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.45;
+  letter-spacing: -0.04em;
+}
+
+.complete-modal .modal-copy p {
+  margin: 0;
+  color: #4f443e;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.75;
+}
+
+/* ---------- 혜택 카드 ---------- */
+.benefit-card {
+  margin-top: 30px;
+  padding: 22px 20px;
+  display: grid;
+  gap: 18px;
+  border-radius: 22px;
+  background: #f8f3ef;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 18px rgba(106, 72, 45, 0.05);
+}
+
+.benefit-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #4a3c34;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.benefit-row svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  color: var(--brown-700);
+  stroke-width: 1.8;
+}
+
+/* ---------- 모달 버튼 ---------- */
+.complete-modal .modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.later-button,
+.review-button {
+  height: 54px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  border: 0;
+}
+
+.later-button {
+  border: 2px solid var(--brown-700);
+  background: #ffffff;
+  color: var(--brown-700);
+}
+
+.review-button {
+  background: var(--gold);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(242, 184, 62, 0.26);
+}
+
+.later-button:hover,
+.review-button:hover {
+  transform: translateY(-1px);
+}
+
+.later-button:active,
+.review-button:active {
+  transform: translateY(0);
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 360px) {
+  .result-main {
+    padding-inline: 16px;
+  }
+  
+  .summary-grid {
+    gap: 8px;
+  }
+  
+  .summary-card strong {
+    font-size: 14px;
+  }
+  
+  .step-card img {
+    height: 180px;
+  }
+
+  .complete-modal {
+    padding-right: 18px;
+    padding-left: 18px;
+    border-radius: 26px;
+  }
+
+  .complete-beaver {
+    width: 225px;
+    height: 145px;
+  }
+
+  .complete-modal .modal-copy h2 {
+    font-size: 19px;
+  }
+
+  .complete-modal .modal-copy p {
+    font-size: 13px;
+  }
+
+  .benefit-row {
+    font-size: 13px;
+  }
+
+  .complete-modal .modal-actions {
+    grid-template-columns: 1fr;
+  }
+}

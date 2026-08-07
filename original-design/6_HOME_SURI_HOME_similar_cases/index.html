@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOME SURI HOME - 유사 사례</title>
+
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="similar.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="similar.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="HOME SURI HOME 홈">
+        <i data-lucide="house"></i>
+        <span>HOME SURI HOME</span>
+      </a>
+
+      <div class="top-actions">
+        <button class="icon-button" type="button" aria-label="검색">
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-button" type="button" aria-label="알림">
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="similar-main">
+
+      <section class="similarity-card">
+        <div class="similarity-icon">
+          <i data-lucide="badge-help"></i>
+        </div>
+
+        <div class="similarity-copy">
+          <span>AI SIMILARITY ANALYSIS</span>
+          <strong>
+            이 문제와 <em>93%</em> 유사한 사례<br>
+            입니다
+          </strong>
+        </div>
+
+        <div class="similarity-gear" aria-hidden="true">
+          <i data-lucide="settings"></i>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title-row">
+          <h1>가장 적합한 해결 사례</h1>
+          <span class="count-pill">24건 발견</span>
+        </div>
+
+        <article class="best-case-card" id="bestCaseCard"></article>
+      </section>
+
+      <article class="progress-case-card" id="progressCaseCard"></article>
+
+      <section class="section-block">
+        <h2>✦ AI 추천 유사 사례</h2>
+        <div class="similar-grid" id="similarGrid"></div>
+      </section>
+
+      <section class="quick-actions">
+        <button type="button" data-toast="상세 후기 화면은 다음 단계에서 연결됩니다.">
+          <i data-lucide="square-pen"></i>
+          <span>상세 후기 보기</span>
+        </button>
+
+        <button type="button" data-toast="커뮤니티 질문 화면은 다음 단계에서 연결됩니다.">
+          <i data-lucide="message-square"></i>
+          <span>커뮤니티 질문</span>
+        </button>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="하단 메뉴">
+      <button class="nav-item" type="button">
+        <i data-lucide="house"></i>
+        <span>홈</span>
+      </button>
+
+      <button class="nav-item active" type="button">
+        <i data-lucide="scan-line"></i>
+        <span>AI 스캔</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="shopping-cart"></i>
+        <span>상점</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="users"></i>
+        <span>커뮤니티</span>
+      </button>
+
+      <button class="nav-item" type="button">
+        <i data-lucide="user-round"></i>
+        <span>MY</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+
+</html>

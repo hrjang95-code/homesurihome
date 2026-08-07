@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* HOME SURI HOME 공통 폰트 - 눈누 CDN */
+@font-face {
+  font-family: "BMHANNA Air";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMHANNAAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 공통 초기화 및 폰트 적용 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BMHANNA Air", sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: #292522;
+  background: #2b2724;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+  font-weight: 900;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 접근성용 숨김 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
